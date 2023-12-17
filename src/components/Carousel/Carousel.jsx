@@ -38,15 +38,7 @@ const Carousel = () => {
   };
 
   
-  const getButtonOrder = (index) => {
-    const totalCards = cards.length;
-    const middleIndex = Math.floor(totalCards / 2);
-    const distanceFromActive = index - activeItem;
 
-    if (distanceFromActive > middleIndex) return distanceFromActive - totalCards;
-    if (distanceFromActive < -middleIndex) return distanceFromActive + totalCards;
-    return distanceFromActive;
-  };
 
   const getCardClassName = (index) => {
     const position = index - activeItem;
