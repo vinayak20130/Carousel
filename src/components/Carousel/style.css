@@ -27,7 +27,7 @@ body.blue {
     left: -35px;
     right: 0;
     margin: auto;
-    transition: transform .4s ease, opacity .4s ease, box-shadow 0.3s ease-in-out;
+    transition: transform .8s ease, opacity .8s ease, box-shadow 0.3s ease-in-out;
     cursor: pointer;
     opacity: 0.5;
     transform: scale(0.5);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 const Carousel = () => {
@@ -21,12 +21,12 @@ const Carousel = () => {
   const updateActiveItem = (index) => {
     setActiveItem(index);
   
-    // Assuming each button (including margins) takes up 20px of space
-    const buttonWidth = 20; // Adjust this based on your actual button size
-    const middlePositionIndex = Math.floor(cards.length / 2); // Middle index in your array
+   
+    const buttonWidth = 20; 
+    const middlePositionIndex = Math.floor(cards.length / 2); 
     const offset = (index - 1 - middlePositionIndex) * buttonWidth;
   
-    setNavOffsetX(-offset); // Move the nav bar in the opposite direction
+    setNavOffsetX(-offset); 
   };
   const handleLeftArrowClick = () => {
     const newIndex = activeItem > 1 ? activeItem - 1 : cards.length;
@@ -99,6 +99,14 @@ const Carousel = () => {
     borderRadius:'5px'
     
   };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      handleRightArrowClick(); 
+    }, 4000); 
+
+  
+    return () => clearInterval(intervalId);
+  }, [activeItem]); 
 
   return (
     <div className="container">
