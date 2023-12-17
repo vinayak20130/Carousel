@@ -13,6 +13,9 @@ const Carousel = () => {
     { imgSrc: 'images/Rectangle 1.jpg', title: 'Modern kitchen utensils' },
     { imgSrc: 'images/Rectangle 2.jpg', title: 'Painting' },
     { imgSrc: 'images/Rectangle 4.jpg', title: 'Flower' },
+    { imgSrc: 'images/Rectangle 6.jpg', title: 'Vector Art' },
+    { imgSrc: 'images/Rectangle 7.jpg', title: 'Stars' },
+    { imgSrc: 'images/Rectangle 8.jpg', title: 'Mandala' },
 
   ];
   const updateActiveItem = (index) => {
