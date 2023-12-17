@@ -93,12 +93,12 @@ const Carousel = () => {
   };
   useEffect(() => {
     const intervalId = setInterval(() => {
-      handleRightArrowClick(); 
-    }, 4000); 
-
+      handleRightArrowClick();
+    }, 4000);
   
     return () => clearInterval(intervalId);
-  }, [activeItem]); 
+  }, [activeItem, handleRightArrowClick]);
+  
 
   return (
     <div className="container">
