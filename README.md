@@ -4,7 +4,8 @@ Screenshots
 ![Screenshot (339)](https://github.com/vinayak20130/Carousel/assets/78793396/f32a9e0d-34e4-480b-9996-9b600a5f1031)
 ![Screenshot (338)](https://github.com/vinayak20130/Carousel/assets/78793396/7dce31b8-3ea6-4f3f-bbdd-f36426b2fce7)
 ![Screenshot (340)](https://github.com/vinayak20130/Carousel/assets/78793396/0f5f2dda-ee8d-42d1-8c68-6bff51ccda98)
-![Screenshot (341)](https://github.com/vinayak20130/Carousel/assets/78793396/3b7b2d8d-34e4-4137-850a-7606125cb2ac)
+![Screenshot (341)](https://github.com/vinayak20130/Carousel/assets/78793396/3b7b2d8d-34e4-4137-850a-7606125cb2ac)![Uploading Screenshot (343).png…]()
+
 
 ![Screenshot (341)](https://github.com/vinayak20130/Carousel/assets/78793396/b279fd6c-04fe-469d-b7ca-e20055ab443d)
 ![Screenshot (342)](https://github.com/vinayak20130/Carousel/assets/78793396/aed15d14-8908-41ba-ad4c-601e8707e227)
