@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Carousel.scss';
+
+const Card = React.memo(({ card, index, onClick, className }) => (
+  <div className={className} onClick={onClick} id={`card-${index}`}>
+    <img src={card.imgSrc} alt={`Card ${index}`} />
+    <div className="card-title">{card.title}</div>
+  </div>
+));
 
 const Carousel = () => {
   const [activeItem, setActiveItem] = useState(1);
-  const [navOffsetX, setNavOffsetX] = useState(0);
 
   // Define your card data with titles
   const cards = [
@@ -18,29 +24,21 @@ const Carousel = () => {
     { imgSrc: 'images/Rectangle 8.jpg', title: 'Mandala' },
 
   ];
-  const updateActiveItem = (index) => {
+  const updateActiveItem = useCallback((index) => {
     setActiveItem(index);
-  
-   
-    const buttonWidth = 20; 
-    const middlePositionIndex = Math.floor(cards.length / 2); 
-    const offset = (index - 1 - middlePositionIndex) * buttonWidth;
-  
-    setNavOffsetX(-offset); 
-  };
-  const handleLeftArrowClick = () => {
+  }, []);
+
+  const handleLeftArrowClick = useCallback(() => {
     const newIndex = activeItem > 1 ? activeItem - 1 : cards.length;
     updateActiveItem(newIndex);
-  };
-  const handleRightArrowClick = () => {
+  }, [activeItem, cards.length, updateActiveItem]);
+
+  const handleRightArrowClick = useCallback(() => {
     const newIndex = activeItem < cards.length ? activeItem + 1 : 1;
     updateActiveItem(newIndex);
-  };
+  }, [activeItem, cards.length, updateActiveItem]);
 
-  
-
-
-  const getCardClassName = (index) => {
+  const getCardClassName = useCallback((index) => {
     const position = index - activeItem;
     if (position === 0) return 'card active';
     if (position === 1 || position === -cards.length + 1) return 'card right';
@@ -48,7 +46,7 @@ const Carousel = () => {
     if (position === 2 || position === -cards.length + 2) return 'card far-right';
     if (position === -2 || position === cards.length - 2) return 'card far-left';
     return 'card';
-  };
+  }, [activeItem, cards.length]);
   const navStyle = {
 
     display: 'flex',
@@ -104,15 +102,13 @@ const Carousel = () => {
     <div className="container">
       <div className="cards">
         {cards.map((card, i) => (
-          <div
+          <Card
             key={i}
-            className={getCardClassName(i + 1)}
+            card={card}
+            index={i + 1}
             onClick={() => updateActiveItem(i + 1)}
-            id={`card-${i + 1}`}
-          >
-            <img src={card.imgSrc} alt={`Card ${i + 1}`} />
-            <div className="card-title">{card.title}</div>
-          </div>
+            className={getCardClassName(i + 1)}
+          />
         ))}
       </div>
      
