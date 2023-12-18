@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style.css';
+import './Carousel.scss';
 
 const Carousel = () => {
   const [activeItem, setActiveItem] = useState(1);
