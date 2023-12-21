@@ -10,7 +10,7 @@ body {
   transition: background 0.4s ease-in;
   font-family: 'Lato', sans-serif;
   background-color: #fff;
-  overflow: auto;
+  overflow: hidden;
 
   &.blue {
     background-color: #428aa6;
@@ -20,7 +20,7 @@ body {
 .card {
   position: absolute;
   width: 600px;
-  height: 450px;
+  height: 45vh; /* Adjust this value as needed */
   left: -35px;
   right: 0;
   margin: auto;

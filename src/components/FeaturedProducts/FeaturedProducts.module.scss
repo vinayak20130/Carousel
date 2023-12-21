@@ -1,7 +1,6 @@
-
 .featuredProducts {
   position: fixed;
-  top: 141px; 
+  top: 14vh; /* Adjust this value to position the element vertically */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -13,15 +12,14 @@
   font-family: 'Lato', sans-serif;
 
   .title {
-    font-size: 64px;
+    font-size: 64px; /* Consider using 'vw' (viewport width) or 'vh' units for responsive font sizes */
     color: #000;
     margin-bottom: -8px; 
     font-weight: 800;
   }
 
   .subtitle {
-    font-size: 24px;
+    font-size: 24px; /* Consider using 'vw' (viewport width) or 'vh' units for responsive font sizes */
     color: #000;
   }
-
 }

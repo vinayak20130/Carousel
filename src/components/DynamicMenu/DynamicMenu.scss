@@ -6,12 +6,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 118px;
+  height: 12vh; /* Adjust this value as needed */
   background-color: #2F302C;
   color: #fff;
-  
-  
- 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   font-family: 'Lato', sans-serif;
@@ -24,9 +21,9 @@
 
       img {
         object-fit: scale-down;
-        margin-right: 5px;
-        width: 100px;
-        height: 100px; 
+  margin-right: 5px;
+  width: 100px; /* Keep the width as fixed or adjust as needed */
+  height: 10vh; /* Adjust this value as needed */
       }
       
       

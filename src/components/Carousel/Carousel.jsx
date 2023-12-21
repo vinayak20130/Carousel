@@ -48,31 +48,30 @@ const Carousel = () => {
     return 'card';
   }, [activeItem, cards.length]);
   const navStyle = {
-
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: '475px',
+    marginTop: '50vh', // Adjust this value as needed
     transition: 'transform 0.7s ease',
-    
   };
+  
   
   const arrowButtonStyle = {
     cursor: 'pointer',
     backgroundSize: 'cover',
     border: 'none',
-    width: '25px',
-    height: '25px', 
+    width: '1.2vw', // Adjust this value as needed
+    height: '1.2vw', // Adjust this value as needed
     margin: '0 5px',
-   
   };
+  
   const buttonStyle = {
     background: `url('images/Dotindictaor.jpg') no-repeat center center`,
     border: 'none',
     cursor: 'pointer',
     borderRadius: '50%', 
-    width: '10px',
-    height: '10px',
+    width: '0.9vw',
+    height: '0.9vw',
     margin: '0 5px',
     transition: 'background-color 0.3s',
 
